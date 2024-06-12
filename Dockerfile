@@ -1,0 +1,8 @@
+FROM ubuntu:latest AS build
+COPY ./ /home/app
+RUN cd /home/app && ./gradlew build
+
+FROM amazoncorretto:17-alpine
+COPY --from=build /home/app/build/libs/spring-render-deploy-0.0.1-SNAPSHOT.jar /usr/local/lib/spring-render-deploy.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","build/libs/server.js"]
