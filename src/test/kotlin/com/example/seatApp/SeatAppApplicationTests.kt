@@ -142,7 +142,7 @@ class SeatAppApplicationTests(
         // localhost/users に POSTリクエストを送る。このときのボディは {"text": "hello"}
         val requestEntity: RequestEntity<Void> =
             RequestEntity.delete("http://localhost:$port/users/{name}", request.name).build()
-        val responseEntity = restTemplate.exchange(requestEntity, Void::class.java)
+        restTemplate.exchange(requestEntity, Void::class.java)
         response = restTemplate.getForEntity("http://localhost:$port/users", Array<User>::class.java)
 
         val users2 = response.body!!
@@ -178,7 +178,7 @@ class SeatAppApplicationTests(
         val request = SeatRequest(1, 4, true)
         val requestEntity: RequestEntity<SeatRequest> =
             RequestEntity.put("http://localhost:$port/seats").contentType(MediaType.APPLICATION_JSON).body(request)
-        val responseEntity = restTemplate.exchange(requestEntity, Void::class.java)
+        restTemplate.exchange(requestEntity, Void::class.java)
 
         // ふたたび localhost/users に GETリクエストを送り、レスポンスを Todoオブジェクトの配列として解釈する。
         response = restTemplate.getForEntity("http://localhost:$port/seats", Array<Seat>::class.java)

@@ -82,12 +82,12 @@
 </thead>
 <tr>
 <td class="success">DELETEリクエストはOKステータスを返す()</td>
-<td class="success">0.028s</td>
+<td class="success">0.031s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">DELETEリクエストはUserオブジェクトを削除する()</td>
-<td class="success">0.019s</td>
+<td class="success">0.022s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -97,7 +97,7 @@
 </tr>
 <tr>
 <td class="success">GETリクエストはOKステータスを返す()</td>
-<td class="success">0.016s</td>
+<td class="success">0.015s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -107,37 +107,37 @@
 </tr>
 <tr>
 <td class="success">GETリクエストはuserオブジェクトのリストを返す()</td>
-<td class="success">0.479s</td>
+<td class="success">0.459s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">POSTリクエストはOKステータスを返す()</td>
-<td class="success">0.013s</td>
+<td class="success">0.016s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">POSTリクエストはUserオブジェクトを格納する()</td>
-<td class="success">0.018s</td>
+<td class="success">0.022s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">PUTリクエストはOKステータスを返す()</td>
-<td class="success">0.013s</td>
+<td class="success">0.018s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">PUTリクエストはUserオブジェクトを更新する()</td>
-<td class="success">0.023s</td>
+<td class="success">0.026s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">contextLoads()</td>
-<td class="success">0.008s</td>
+<td class="success">0.011s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">最初のテスト()</td>
-<td class="success">0.012s</td>
+<td class="success">0.009s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -145,8 +145,8 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>15:26:46.763 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.seatApp.SeatAppApplicationTests]: SeatAppApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-15:26:46.802 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.seatApp.SeatAppApplication for test class com.example.seatApp.SeatAppApplicationTests
+<pre>20:40:50.417 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.seatApp.SeatAppApplicationTests]: SeatAppApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:40:50.453 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.seatApp.SeatAppApplication for test class com.example.seatApp.SeatAppApplicationTests
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
@@ -156,34 +156,34 @@
 
  :: Spring Boot ::                (v3.3.0)
 
-2024-06-12T15:26:46.929+09:00  INFO 51144 --- [seatApp] [    Test worker] c.e.seatApp.SeatAppApplicationTests      : Starting SeatAppApplicationTests using Java 21.0.3 with PID 51144 (started by user in /Users/user/seatApp)
-2024-06-12T15:26:46.929+09:00  INFO 51144 --- [seatApp] [    Test worker] c.e.seatApp.SeatAppApplicationTests      : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2024-06-12T15:26:47.130+09:00  INFO 51144 --- [seatApp] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2024-06-12T15:26:47.136+09:00  INFO 51144 --- [seatApp] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
-2024-06-12T15:26:47.306+09:00  INFO 51144 --- [seatApp] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
-2024-06-12T15:26:47.311+09:00  INFO 51144 --- [seatApp] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-06-12T15:26:47.311+09:00  INFO 51144 --- [seatApp] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
-2024-06-12T15:26:47.334+09:00  INFO 51144 --- [seatApp] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-06-12T15:26:47.334+09:00  INFO 51144 --- [seatApp] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 399 ms
-2024-06-12T15:26:47.428+09:00  INFO 51144 --- [seatApp] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-06-12T15:26:47.470+09:00  INFO 51144 --- [seatApp] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2b44605c
-2024-06-12T15:26:47.470+09:00  INFO 51144 --- [seatApp] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-06-12T15:26:47.483+09:00  INFO 51144 --- [seatApp] [    Test worker] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost/seatdb (PostgreSQL 14.12)
-2024-06-12T15:26:47.503+09:00  INFO 51144 --- [seatApp] [    Test worker] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.011s)
-2024-06-12T15:26:47.524+09:00  INFO 51144 --- [seatApp] [    Test worker] o.f.core.internal.command.DbMigrate      : Current version of schema &quot;public&quot;: 3
-2024-06-12T15:26:47.525+09:00  INFO 51144 --- [seatApp] [    Test worker] o.f.core.internal.command.DbMigrate      : Schema &quot;public&quot; is up to date. No migration necessary.
-2024-06-12T15:26:47.566+09:00  INFO 51144 --- [seatApp] [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2024-06-12T15:26:47.725+09:00  INFO 51144 --- [seatApp] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 51957 (http) with context path '/'
-2024-06-12T15:26:47.729+09:00  INFO 51144 --- [seatApp] [    Test worker] c.e.seatApp.SeatAppApplicationTests      : Started SeatAppApplicationTests in 0.881 seconds (process running for 1.289)
-2024-06-12T15:26:48.148+09:00  INFO 51144 --- [seatApp] [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-06-12T15:26:48.148+09:00  INFO 51144 --- [seatApp] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-06-12T15:26:48.148+09:00  INFO 51144 --- [seatApp] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-06-12T20:40:50.578+09:00  INFO 57935 --- [seatApp] [    Test worker] c.e.seatApp.SeatAppApplicationTests      : Starting SeatAppApplicationTests using Java 21.0.3 with PID 57935 (started by user in /Users/user/seatapp)
+2024-06-12T20:40:50.578+09:00  INFO 57935 --- [seatApp] [    Test worker] c.e.seatApp.SeatAppApplicationTests      : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-06-12T20:40:50.769+09:00  INFO 57935 --- [seatApp] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-12T20:40:50.778+09:00  INFO 57935 --- [seatApp] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JDBC repository interfaces.
+2024-06-12T20:40:50.950+09:00  INFO 57935 --- [seatApp] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2024-06-12T20:40:50.954+09:00  INFO 57935 --- [seatApp] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-12T20:40:50.954+09:00  INFO 57935 --- [seatApp] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-12T20:40:50.975+09:00  INFO 57935 --- [seatApp] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-12T20:40:50.976+09:00  INFO 57935 --- [seatApp] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 391 ms
+2024-06-12T20:40:51.064+09:00  INFO 57935 --- [seatApp] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-12T20:40:51.107+09:00  INFO 57935 --- [seatApp] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2b44605c
+2024-06-12T20:40:51.107+09:00  INFO 57935 --- [seatApp] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-12T20:40:51.120+09:00  INFO 57935 --- [seatApp] [    Test worker] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost/seatdb (PostgreSQL 14.12)
+2024-06-12T20:40:51.140+09:00  INFO 57935 --- [seatApp] [    Test worker] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.011s)
+2024-06-12T20:40:51.151+09:00  INFO 57935 --- [seatApp] [    Test worker] o.f.core.internal.command.DbMigrate      : Current version of schema &quot;public&quot;: 3
+2024-06-12T20:40:51.152+09:00  INFO 57935 --- [seatApp] [    Test worker] o.f.core.internal.command.DbMigrate      : Schema &quot;public&quot; is up to date. No migration necessary.
+2024-06-12T20:40:51.195+09:00  INFO 57935 --- [seatApp] [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-06-12T20:40:51.349+09:00  INFO 57935 --- [seatApp] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 55736 (http) with context path '/'
+2024-06-12T20:40:51.353+09:00  INFO 57935 --- [seatApp] [    Test worker] c.e.seatApp.SeatAppApplicationTests      : Started SeatAppApplicationTests in 0.855 seconds (process running for 1.248)
+2024-06-12T20:40:51.757+09:00  INFO 57935 --- [seatApp] [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-12T20:40:51.758+09:00  INFO 57935 --- [seatApp] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-12T20:40:51.758+09:00  INFO 57935 --- [seatApp] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
 --@PostMapping--
 --run postUser--
 --useRequest.name--,なかの
 --@deleteMapping--
 --name--,なかの
---UserRequest(name)--,com.example.seatApp.UserRequest@3c6e4387
+--UserRequest(name)--,com.example.seatApp.UserRequest@44ce9641
 --UserRequest(name).name--,なかの
 --run deleteUser--
 --useRequest.name--,なかの
@@ -197,15 +197,15 @@ postResponse
 --useRequest.name--,なかの
 --@deleteMapping--
 --name--,なかの
---UserRequest(name)--,com.example.seatApp.UserRequest@50c59252
+--UserRequest(name)--,com.example.seatApp.UserRequest@6500d3a4
 --UserRequest(name).name--,なかの
 --run deleteUser--
 --useRequest.name--,なかの
-[Lcom.example.seatApp.User;@a5d23c9
-[Lcom.example.seatApp.User;@795131d6
+[Lcom.example.seatApp.User;@31450fc0
+[Lcom.example.seatApp.User;@52b30dcd
 --@PutMapping--
 --run putSeat--
-[Lcom.example.seatApp.Seat;@5a4e492c
+[Lcom.example.seatApp.Seat;@59ec5a0b
 --@PutMapping--
 --run putSeat--
 --@PostMapping--
@@ -232,7 +232,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.8</a> at 2024/06/12 15:26:49</p>
+<a href="http://www.gradle.org">Gradle 8.8</a> at 2024/06/12 20:40:53</p>
 </div>
 </div>
 </body>
