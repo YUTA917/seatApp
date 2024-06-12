@@ -1,0 +1,4 @@
+.namePlate {
+	text-align: center;
+	line-height: calc(80px - 40px);
+}

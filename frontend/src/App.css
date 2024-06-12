@@ -1,0 +1,20 @@
+.All {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	background-color: gray;
+}
+
+.LeftArea {
+	width: 20%;
+}
+
+.RightArea {
+	width: 80%;
+}
+
+/* .col {
+	height: 100px;
+	width: 100px;
+	background-color: azure;
+} */

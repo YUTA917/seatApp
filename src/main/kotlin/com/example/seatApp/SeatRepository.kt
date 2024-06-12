@@ -19,7 +19,7 @@ class UserRowMapper : RowMapper<User> {
 @Component
 class SeatRowMapper : RowMapper<Seat> {
     override fun mapRow(rs: ResultSet, rowNum: Int): Seat {
-        return Seat(rs.getInt(1), rs.getInt(2),rs.getBoolean(3))
+        return Seat(rs.getInt(1), rs.getString(2), rs.getBoolean(3), rs.getInt(4), rs.getInt(5))
     }
 }
 
@@ -35,24 +35,32 @@ class SeatRepository(
 
     fun postUser(userRequest: UserRequest): Int {
         println("--run postUser--")
-        println("--useRequest.name--,"+userRequest.name)
+        println("--useRequest.name--," + userRequest.name)
         return jdbcTemplate.update("INSERT INTO users (name) VALUES (?)", userRequest.name)
     }
 
     fun deleteUser(userRequest: UserRequest): Int {
         println("--run deleteUser--")
-        println("--useRequest.name--,"+userRequest.name)
+        println("--useRequest.name--," + userRequest.name)
         return jdbcTemplate.update("DELETE FROM users WHERE name = ?", userRequest.name)
     }
 
     fun getSeats(): List<Seat> {
-        return jdbcTemplate.query("SELECT id, user_id, filled FROM seats ORDER BY id", seatRowMapper)
+        return jdbcTemplate.query(
+            "SELECT seats.id, name, filled, x, y FROM seats LEFT JOIN users ON seats.user_id = users.id ORDER BY id",
+            seatRowMapper
+        )
     }
 
-    fun putSeat ( seatRequest : SeatRequest): Int {
+    fun putSeat(seatRequest: SeatRequest): Int {
         println("--run putSeat--")
 
-        return jdbcTemplate.update("UPDATE seats SET user_id = ? , filled = ? WHERE id = ?", seatRequest.userId ,seatRequest.filled ,seatRequest.seatId)
+        return jdbcTemplate.update(
+            "UPDATE seats SET user_id = ? , filled = ? WHERE id = ?",
+            seatRequest.userId,
+            seatRequest.filled,
+            seatRequest.seatId
+        )
     }
 
 
