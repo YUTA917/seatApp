@@ -1,5 +1,5 @@
 # FROM amazoncorretto:17-alpine AS build
-FROM public.ecr.aws/bitnami/gradle:8
+FROM amazoncorretto:17-alpine AS build
 COPY ./ home/app
 RUN cd home/app && ls &&./gradlew build --stacktrace --info
 
