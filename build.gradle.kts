@@ -5,7 +5,7 @@ plugins {
     id("io.spring.dependency-management") version "1.1.5"
     kotlin("jvm") version "1.9.24"
     kotlin("plugin.spring") version "1.9.24"
-    id("org.gradle.toolchains.foojay-resolver-convention") version ("0.4.0")
+//    id("org.gradle.toolchains.foojay-resolver-convention") version ("0.4.0")
 //    id("com.github.johnrengelman.shadow") version "4.0.4"
 }
 
