@@ -1,5 +1,5 @@
 # FROM amazoncorretto:17-alpine AS build
-FROM amazoncorretto:17-alpine AS build
+FROM amazoncorretto:21-alpine AS build
 COPY ./ home/app
 RUN cd home/app && ls &&./gradlew build --stacktrace --info
 
