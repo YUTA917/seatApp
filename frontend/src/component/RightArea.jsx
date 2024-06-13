@@ -5,7 +5,7 @@ import L from "leaflet";
 import { MapContainer, ImageOverlay, Marker, useMapEvent } from "react-leaflet";
 import "leaflet/dist/leaflet.css"; // 追加
 import "./RightArea.css";
-import bgImage from "/image/座席.jpeg";
+import bgImage from "/image/seat.jpeg";
 import NamePlate from "./NamePlate";
 import axios from "axios";
 import Button from "react-bootstrap/Button";

@@ -1,19 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
-
 import axios from "axios";
 
 export default function DisplayUser(props) {
 	const { setUserId, reload } = props;
-	const inputEl = useRef(null);
 	const [users, setUsers] = useState([]);
-
-	const userList = users;
 
 	useEffect(() => {
 		axios
-			.get("http://localhost:8080/users")
+			.get("/users")
 			.then((res) => {
 				setUsers(res.data);
 			})
