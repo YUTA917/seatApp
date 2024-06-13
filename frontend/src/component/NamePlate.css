@@ -1,4 +1,22 @@
 .namePlate {
 	text-align: center;
-	line-height: calc(80px - 40px);
+	line-height: calc(80px - 30px);
+	border-radius: 3px;
+}
+/* .nameButton {
+	height: 50;
+	width: 80;
+} */
+
+.isNameIcon {
+	border-radius: 3px;
+	background-color: rgb(50, 97, 205);
+	font-size: large;
+	color: white;
+}
+
+.noNameIcon {
+	border-radius: 3px;
+	background-color: lightgrey;
+	font-size: large;
 }

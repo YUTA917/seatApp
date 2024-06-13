@@ -14,8 +14,18 @@ export default function LeftArea(props) {
 				<h3>ユーザー選択してね</h3>
 			</div>
 			<DisplayUser reload={reload} setUserId={setUserId} />
-			<AddUserButton reload={reload} setReload={setReload} />
-			<DeleteUserButton reload={reload} setReload={setReload} />
+			<div className="buttonArea">
+				<AddUserButton
+					className="funcButton"
+					reload={reload}
+					setReload={setReload}
+				/>
+				<DeleteUserButton
+					className="funcButton"
+					reload={reload}
+					setReload={setReload}
+				/>
+			</div>
 		</div>
 	);
 }

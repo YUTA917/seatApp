@@ -25,7 +25,7 @@ export default function DisplayUser(props) {
 	console.log(users);
 
 	return (
-		<div>
+		<div className="nameArea">
 			{users.map((ele) => {
 				return (
 					<>

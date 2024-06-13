@@ -4,9 +4,10 @@ import { CRS, LatLng, LatLngBounds } from "leaflet";
 import L from "leaflet";
 import { MapContainer, ImageOverlay, Marker, useMapEvent } from "react-leaflet";
 import "leaflet/dist/leaflet.css"; // 追加
-import bgImage from "../../public/image/座席.jpeg";
+import bgImage from "/image/座席.jpeg";
 import NamePlate from "./NamePlate";
 import axios from "axios";
+import Button from "react-bootstrap/Button";
 // import { ImageOverlay } from "https://cdn.esm.sh/react-leaflet/ImageOverlay";
 
 // import "./RightArea.css";
@@ -18,9 +19,8 @@ export default function RightArea(props) {
 
 	useEffect(() => {
 		axios
-			.get("http://localhost:8080/seats")
+			.get("/seats")
 			.then((res) => {
-				debugger;
 				setSeats(res.data);
 			})
 			.catch((err) => {
@@ -38,10 +38,11 @@ export default function RightArea(props) {
 
 	const position = [130, 330];
 
-	function NameIcon(name) {
+	function nameIcon(name) {
 		return L.divIcon({
 			html: ReactDOMServer.renderToString(<NamePlate name={name} />),
 			iconSize: [80, 50],
+			className: name !== null ? "isNameIcon" : "noNameIcon",
 		});
 	}
 
@@ -51,11 +52,11 @@ export default function RightArea(props) {
 		if (name === null) {
 			body = { seatId: id, userId, filled: true };
 		} else {
-			body = { seatId: id, userId: null, filled: true };
+			body = { seatId: id, userId: null, filled: false };
 		}
 		console.log(body);
 		axios
-			.put("http://localhost:8080/seats", body)
+			.put("/seats", body)
 			.then((res) => {
 				console.log(res.data);
 				setReload(!reload);
@@ -74,13 +75,23 @@ export default function RightArea(props) {
 		return null;
 	}
 
+	function autoSetSeatId() {
+		let isNotName = seats
+			.filter((ele) => ele.filled === false)
+			.map((ele) => ele.id);
+		console.log(isNotName);
+		return isNotName[Math.floor(Math.random() * isNotName.length)];
+	}
+
+	// autoSetSeatId();
+
 	return (
-		<>
+		<div className="leftArea">
 			{/* <img src={"../../public/image/座席.png"}></img> */}
 			<MapContainer
 				center={new LatLng(seatImage.height / 2, seatImage.width / 2)}
 				zoom={0}
-				style={{ width: 800, height: 600 }}
+				style={{ width: 800, height: 600, backgroundColor: "white" }}
 				crs={CRS.Simple}
 				className="map"
 				zoomControl={false}
@@ -95,17 +106,17 @@ export default function RightArea(props) {
 					}
 				/>
 				<MyComponent />
-				{console.log(seats)}
+				{/* {console.log(seats)} */}
 				{seats !== undefined &&
 					seats.map((ele) => {
 						// const marker = L.marker([ele.x, ele.y]);
 						// map.addLayer(marker);
-						console.log(ele.id, ele.name);
+						// console.log(ele.id, ele.name);
 						return (
 							<Marker
 								key={ele.id}
 								position={[ele.x, ele.y]}
-								icon={NameIcon(ele.name)}
+								icon={nameIcon(ele.name)}
 								eventHandlers={{
 									click: () => {
 										postName(ele.id, ele.name);
@@ -115,6 +126,23 @@ export default function RightArea(props) {
 						);
 					})}
 			</MapContainer>
-		</>
+			<div
+				style={{
+					width: "100%",
+					display: "flex",
+					justifyContent: "center",
+				}}
+			>
+				<Button
+					className="autoButton"
+					onClick={() => {
+						postName(autoSetSeatId(), null);
+					}}
+					style={{ backgroundColor: "black" }}
+				>
+					どこでもいいよ
+				</Button>
+			</div>
+		</div>
 	);
 }

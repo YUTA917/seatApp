@@ -28,7 +28,7 @@ function AddUserButton(props) {
 
 	return (
 		<>
-			<div className="mb-2">
+			<div className="funcButton">
 				<Button
 					className="operationButton"
 					variant="primary"

@@ -6,3 +6,17 @@
 	background-color: darkblue;
 	margin: 3px;
 }
+
+.nameArea {
+	height: 60%;
+	width: 100%;
+}
+
+.buttonArea {
+	display: flex;
+	width: 100%;
+	text-align: center;
+}
+.funcButton {
+	margin: 10px;
+}
