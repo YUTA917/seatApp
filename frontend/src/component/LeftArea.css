@@ -8,8 +8,10 @@
 }
 
 .nameArea {
-	height: 60%;
+	height: 80%;
 	width: 100%;
+	border-color: black;
+	border-bottom: solid;
 }
 
 .buttonArea {

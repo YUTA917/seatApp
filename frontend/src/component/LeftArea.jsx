@@ -9,7 +9,12 @@ export default function LeftArea(props) {
 	const [reload, setReload] = useState(false);
 
 	return (
-		<div>
+		<div
+			style={{
+				borderColor: "black",
+				borderStyle: "solid",
+			}}
+		>
 			<div className="smallTitle">
 				<h3>ユーザー選択してね</h3>
 			</div>

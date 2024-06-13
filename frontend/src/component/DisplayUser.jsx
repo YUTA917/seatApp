@@ -28,20 +28,18 @@ export default function DisplayUser(props) {
 		<div className="nameArea">
 			{users.map((ele) => {
 				return (
-					<>
-						<Button
-							className="userName"
-							variant="primary"
-							size="sg"
-							key={ele.id}
-							id={ele.id}
-							onClick={(ele) => {
-								setUserId(ele.target.id);
-							}}
-						>
-							{ele.name}
-						</Button>
-					</>
+					<Button
+						className="userName"
+						variant="primary"
+						size="sg"
+						key={ele.id}
+						id={ele.id}
+						onClick={(ele) => {
+							setUserId(ele.target.id);
+						}}
+					>
+						{ele.name}
+					</Button>
 				);
 			})}
 		</div>

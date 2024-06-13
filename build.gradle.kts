@@ -35,11 +35,11 @@ dependencies {
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
-//kotlin {
-//    compilerOptions {
-//        freeCompilerArgs.addAll("-Xjsr305=strict")
-//    }
-//}
+kotlin {
+    compilerOptions {
+        freeCompilerArgs.addAll("-Xjsr305=strict")
+    }
+}
 
 tasks.withType<KotlinCompile> {
     kotlinOptions {

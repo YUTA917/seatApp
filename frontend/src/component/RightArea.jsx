@@ -4,6 +4,7 @@ import { CRS, LatLng, LatLngBounds } from "leaflet";
 import L from "leaflet";
 import { MapContainer, ImageOverlay, Marker, useMapEvent } from "react-leaflet";
 import "leaflet/dist/leaflet.css"; // 追加
+import "./RightArea.css";
 import bgImage from "/image/座席.jpeg";
 import NamePlate from "./NamePlate";
 import axios from "axios";
@@ -86,7 +87,7 @@ export default function RightArea(props) {
 	// autoSetSeatId();
 
 	return (
-		<div className="leftArea">
+		<div className="rightArea">
 			{/* <img src={"../../public/image/座席.png"}></img> */}
 			<MapContainer
 				center={new LatLng(seatImage.height / 2, seatImage.width / 2)}

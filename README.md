@@ -14,7 +14,8 @@ React
 
 #### ライブラリ
 
-React Bootstrap &
+React Bootstrap<br>
+axios<br>
 Leaflet
 
 ## プロジェクトの概要
@@ -28,8 +29,28 @@ Leaflet
 座席から名前を消す時は名前をクリックしてください。
 これが基本的な使い方です。
 
-## ディレクトリ構成
-
 ## 開発環境の構築方法
 
-## トラブルシューティング
+今回はIntelliJを使用した方法です（フロントエンドはVScode可）
+
+### バックエンド
+
+ファイルをIntelliJで開く
+右側のゾウさんのアイコンからTasks-Application-bootRunを起動
+
+http://localhost:8080/
+
+を開いてWelcome!と表示されれば成功です。
+
+その後テストを一度走らせるとシードデータが入ります。
+テストの走らせ方は右側のゾウさんのアイコンからTasks-Application-bootTestRunを起動
+
+### フロントエンド
+
+ターミナルでcd frontendを入力し、続いて以下のコマンドを入力
+
+npm install
+
+npm run dev
+
+表示されたLocalhostのリンクにアクセスし、ページが表示されたらOK
