@@ -1,5 +1,6 @@
 package com.example.seatApp
 
+
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
@@ -7,5 +8,7 @@ import org.springframework.boot.runApplication
 class SeatAppApplication
 
 fun main(args: Array<String>) {
-	runApplication<SeatAppApplication>(*args)
+    runApplication<SeatAppApplication>(*args)
+//    val path = System.getenv("USER")
+//    println(path)
 }

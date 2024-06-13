@@ -7,4 +7,4 @@ FROM amazoncorretto:21-alpine
 COPY --from=build /home/app/build/libs/seatapp-0.0.1-SNAPSHOT.jar /usr/local/lib/seatapp.jar
 EXPOSE 8080
 # RUN cd build/libs && ls
-ENTRYPOINT ["java","-jar","-Dfile.encoding=UTF-8","/usr/local/lib/seatapp.jar"]
+ENTRYPOINT ["java","-jar","-Dfile.encoding=UTF-8","/usr/local/lib/seatapp.jar","--debug"]

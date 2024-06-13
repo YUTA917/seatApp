@@ -9,6 +9,7 @@ function App() {
 	return (
 		<div className="All">
 			<LeftArea setUserId={setUserId} className="LeftArea"></LeftArea>
+			<div style={{ width: "5%" }}></div>
 			<RightArea className="RightArea" userId={userId}></RightArea>
 		</div>
 	);
