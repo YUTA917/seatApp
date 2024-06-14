@@ -31,19 +31,23 @@ Leaflet
 
 ## 開発環境の構築方法
 
-今回はIntelliJを使用した方法です（フロントエンドはVScode可）
+今回はIntelliJを使用した方法です（フロントエンドはVScodeでも可）
 
 ### バックエンド
 
-ファイルをIntelliJで開く
+ターミナルでpsqlを入力しpsqlを開く
+CREATE DATABASE seatdb と入力しdbを作成
+
+IntelliJで開く
+src-main-resources-application.propertiesファイルを開く
+spring.datasource.url=jdbc:postgresql://dpg-cpkjntsf7o1s73cq8cdg-a:5432/seatdbをコメントアウト
+spring.datasource.url=jdbc:postgresql://localhost/seatdbを生かす
+
 右側のゾウさんのアイコンからTasks-Application-bootRunを起動
 
 http://localhost:8080/
 
 を開いてWelcome!と表示されれば成功です。
-
-その後テストを一度走らせるとシードデータが入ります。
-テストの走らせ方は右側のゾウさんのアイコンからTasks-Application-bootTestRunを起動
 
 ### フロントエンド
 
@@ -54,3 +58,10 @@ npm install
 npm run dev
 
 表示されたLocalhostのリンクにアクセスし、ページが表示されたらOK
+
+## デプロイ先
+
+https://seatapp-1.onrender.com
+
+POSTとDELETEがうごかないです
+GETとPUTは問題なし

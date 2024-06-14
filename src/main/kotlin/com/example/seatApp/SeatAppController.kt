@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.*
 
 
 @RestController
-@CrossOrigin(origins = ["http://localhost:5173"], allowCredentials = "true")
-    class TodoController(val seatRepository: SeatRepository) {
+@CrossOrigin(allowCredentials = "true")
+class TodoController(val seatRepository: SeatRepository) {
 
     @GetMapping("/users")
     fun getUsers(): List<User> {
@@ -21,11 +21,11 @@ import org.springframework.web.bind.annotation.*
 
     @DeleteMapping("/users/{name}")
     @CrossOrigin(origins = ["http://localhost:8081"], allowCredentials = "true")
-    fun deleteUser(@PathVariable("name") name: String): Int{
+    fun deleteUser(@PathVariable("name") name: String): Int {
         println("--@deleteMapping--")
-        println("--name--,"+name)
-        println("--UserRequest(name)--,"+UserRequest(name))
-        println("--UserRequest(name).name--,"+UserRequest(name).name)
+        println("--name--," + name)
+        println("--UserRequest(name)--," + UserRequest(name))
+        println("--UserRequest(name).name--," + UserRequest(name).name)
 
         return seatRepository.deleteUser(UserRequest(name))
     }
@@ -41,6 +41,6 @@ import org.springframework.web.bind.annotation.*
         return seatRepository.putSeat(seatRequest)
     }
 
-    }
+}
 
 
