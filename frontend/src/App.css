@@ -2,8 +2,9 @@
 	display: flex;
 	width: 100%;
 	height: 100%;
-	background-color: lightgray;
+	background-color: #34668b;
 	padding: 10px;
+	color: white;
 }
 
 .LeftArea {

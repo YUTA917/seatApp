@@ -16,7 +16,8 @@ React
 
 React Bootstrap<br>
 axios<br>
-Leaflet
+Leaflet<br>
+React Leaflet
 
 ## プロジェクトの概要
 
@@ -43,11 +44,7 @@ src-main-resources-application.propertiesファイルを開く
 spring.datasource.url=jdbc:postgresql://dpg-cpkjntsf7o1s73cq8cdg-a:5432/seatdbをコメントアウト
 spring.datasource.url=jdbc:postgresql://localhost/seatdbを生かす
 
-右側のゾウさんのアイコンからTasks-Application-bootRunを起動
-
-http://localhost:8080/
-
-を開いてWelcome!と表示されれば成功です。
+右側のゾウさんのアイコンからTasks-Application-bootRunを起動するとサーバーが起動します
 
 ### フロントエンド
 
@@ -63,5 +60,3 @@ npm run dev
 
 https://seatapp-1.onrender.com
 
-POSTとDELETEがうごかないです
-GETとPUTは問題なし
