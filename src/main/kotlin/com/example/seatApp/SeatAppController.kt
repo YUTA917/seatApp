@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*
 
 
 @RestController
-@CrossOrigin(allowCredentials = "true")
+@CrossOrigin(origins = ["http://localhost:5173"], allowCredentials = "true")
 class TodoController(val seatRepository: SeatRepository) {
 
     @GetMapping("/users")
