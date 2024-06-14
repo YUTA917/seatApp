@@ -15,7 +15,7 @@ function DeleteUserButton(props) {
 
 	const deleteUser = (name) => {
 		axios
-			.delete(`http://localhost:8080/users/${name}`)
+			.delete(`/users/${name}`)
 			.then((res) => {
 				console.log(res.data);
 				setReload(!reload);

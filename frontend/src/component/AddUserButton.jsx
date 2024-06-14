@@ -16,7 +16,7 @@ function AddUserButton(props) {
 	const addUser = (name) => {
 		const body = { name };
 		axios
-			.post("http://localhost:8080/users", body)
+			.post("/users", body)
 			.then((res) => {
 				console.log(res.data);
 				setReload(!reload);
